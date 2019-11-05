@@ -16,8 +16,8 @@
 		</tr>
 		<?php 
 		include 'koneksi.php';
-		$no = 1;
-		$data = mysqli_query($koneksi,"select * from fashion");
+			$no = 1;
+			$data = mysqli_query($koneksi,"select * from fashion");
 		while($d = mysqli_fetch_array($data)){
 			?>
 			<tr>
