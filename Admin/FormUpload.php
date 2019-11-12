@@ -41,7 +41,7 @@ if(isset($_POST['tombol'])){
     $name_p = $_FILES['gambar']['name'];
     $sumber_p = $_FILES['gambar']['tmp_name'];
     move_uploaded_file($sumber_p,$folder.$name_p);
-    $insert = mysqli_query($connect,"INSERT INTO fashion VALUES (NULL,'".$_POST['nama']."','".$_POST['pencipta']."','".$_POST['keterangan']."',
+    $insert = mysqli_query($conn,"INSERT INTO fashion VALUES ('".$_POST['nama']."','".$_POST['pencipta']."','".$_POST['keterangan']."',
     '".$name_p."')");
 
     if($insert){
