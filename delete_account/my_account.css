@@ -1,0 +1,130 @@
+body {
+    background-color: #f4f6f6;
+}
+.topnav {
+    display: flex;
+    font-family: 'Questrial';
+    font-size: 16px;
+    height: 60px;
+}
+.topnav_logo {
+    width: 10%;    
+}
+.img_logo {
+    width: 125px;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #e9e4e6;
+}
+.topnav_menu {
+    width: 85%;
+    padding-left: 2%;
+}
+.topnav_menu, .topnav_account {
+    display: block;
+    margin: auto;
+}
+.topnav_menu a {
+    padding: 10px 15px;
+    text-decoration: none;
+    text-align: center;
+    color: #204969;
+}
+.topnav_menu a:hover {
+    color: #626568;
+    background-color: #fdfdfd;
+    border-radius: 8px;
+}
+.topnav_account {
+    width: 20%;
+    display: flex;
+}
+.ava_acc {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+.userbutton {
+    background-color: transparent;
+    color: 626568;
+    padding: 5px;
+    margin-left: 25px;
+    font-size: 14px;
+    border: none;
+}
+.dropdownuser {
+    position: relative;
+    display: inline-block;
+    margin: auto 0;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    font-size: 13px;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: #204969;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {background-color: #ddd;}
+.dropdownuser:hover .dropdown-content {display: block;}
+.dropdownuser:hover .dropbtn {background-color: #3e8e41;}
+.signout:hover {color: #c70d3a;}
+
+.content {
+    font-family: 'Questrial';
+    margin: 50px auto;
+    display: flex;
+    width: 60%;
+}
+.avatar_change {
+    flex: 1;
+    position: relative;
+}
+.ava_account {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 150px;
+}
+.acc_detail {
+    flex: 2;
+    width: 65%;
+}
+.form_wrapper { 
+    background-color: #f8f8f8;
+    padding: 10px;
+    list-style-type: none;
+    border-radius: 5px;
+    box-shadow: 5px 10px 18px #888888;
+}
+.form_row {
+    margin: 5px;
+    display: flex;
+    justify-content: flex-end;
+}
+.form_row > label {
+    flex: 1;
+    padding: .5em 1em .5em 0;
+}
+.form_row > input {
+    flex: 2;
+}
+.update_btn {
+    border: none;
+    background-color: transparent;
+    font-size: 15px;
+    color: #00909e;
+    margin-top: 10px;
+}
