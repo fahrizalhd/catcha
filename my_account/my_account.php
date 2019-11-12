@@ -1,7 +1,10 @@
 <?php
     include 'connect.php';
-    $id = 3;
-    $sql_read = "SELECT * FROM user WHERE id = $id";
+
+    session_start();
+    $usernamelogged = $_SESSION['username'];
+    
+    $sql_read = "SELECT * FROM user WHERE username = $usernamelogged";
     $read = mysqli_query($conn, $sql_read);
     $d = mysqli_fetch_array($read);
 
@@ -54,8 +57,8 @@
                         </li>
                         
                         <li class="form_row">
-                            <label> Username </label> 
-                            <input type="hidden" name="id" value="<?= $id ?>">
+                            <label> Username </label>
+                            <input type="hidden" name="id" value="<?= $d['id']?>"> 
                             <input type="text" name="username" value="<?= $d['username']?>" onfocus="this.value=''">   
                         </li>    
                         
@@ -70,7 +73,7 @@
                         </li>
 
                         <li class="form_row">
-                            <input type="button" name="update_btn" class="update_btn" value="Save">
+                            <input type="submit" name="update_btn" class="update_btn" value="Save">
                         </li>                    
                     </ul>          
                 </form>
