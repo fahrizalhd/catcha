@@ -1,9 +1,10 @@
 <?php
     include 'connect.php';
-    $username = 'allisyajustine';
-    $sql = "SELECT * FROM user WHERE username = '$username'";
-    $query = mysqli_query($conn, $sql);
-    $d = mysqli_fetch_array($query)
+    $id = 3;
+    $sql_read = "SELECT * FROM user WHERE id = $id";
+    $read = mysqli_query($conn, $sql_read);
+    $d = mysqli_fetch_array($read);
+
 ?>
 
 <html>
@@ -27,7 +28,7 @@
 
             <div class="topnav_account">
                 <div class="ava_acc">
-                    <?= $d['avatar'] ?>
+                    <img class="ava_acc" src="<?= $d['avatar'] ?>">
                 </div>
                 <div class="dropdownuser">
                     <button class="userbutton"><?= $d['nama']?> </button>
@@ -41,25 +42,37 @@
 
         <div class="content">
             <div class="avatar_change">
-                <img class="ava_account" src="acc.png">
-                <?= $d['avatar'] ?>
+                <img class="ava_account" src="<?= $d['avatar'] ?>">
             </div>
 
             <div class="acc_detail">
                 <form action="update.php" method="post">
-                    <label> Nama </table> 
-                    <input type="text" name="nama" value="<?= $d['nama']?>"> <br>
-                             
-                    <label> Username </table> 
-                    <input type="text" name="username" value="<?= $d['username']?>"> <br>
-                             
-                    <label> E-mail </table> 
-                    <input type="text" name="username" value="<?= $d['email']?>"> <br>
-                             
-                    <label> Password </table> 
-                    <input type="password" name="username" value="<?= $d['password']?>"> <br> 
-                             
-                    <input type="button" name="update_button" class="update_button" value="Save">
+                    <ul class="form_wrapper">
+                        <li class="form_row">
+                            <label> Nama </label> 
+                            <input type="text" name="nama" value="<?= $d['nama']?>" onfocus="this.value=''">  
+                        </li>
+                        
+                        <li class="form_row">
+                            <label> Username </label> 
+                            <input type="hidden" name="id" value="<?= $id ?>">
+                            <input type="text" name="username" value="<?= $d['username']?>" onfocus="this.value=''">   
+                        </li>    
+                        
+                        <li class="form_row">     
+                            <label> E-mail </label> 
+                            <input type="text" name="email" value="<?= $d['email']?>" onfocus="this.value=''">  
+                        </li>
+
+                        <li class="form_row">
+                            <label> Password </label> 
+                            <input type="password" name="password" placeholder="Password" required>   
+                        </li>
+
+                        <li class="form_row">
+                            <input type="button" name="update_btn" class="update_btn" value="Save">
+                        </li>                    
+                    </ul>          
                 </form>
             </div>
         </div>
