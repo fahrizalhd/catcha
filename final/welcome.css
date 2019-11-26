@@ -1,0 +1,73 @@
+body {
+    background-color: #f4f6f6;
+    background-image: url("ru.png");
+}
+.topnav {
+    display: flex;
+    font-family: 'Questrial';
+    font-size: 16px;
+    overflow: hidden;
+    border-radius: 0 0 8px 8px;
+    background-color: #f4f6f6;
+    box-shadow: 10px 10px 8px #888888;
+}
+.topnav_logo {
+    width: 10%;    
+}
+.img_logo {
+    width: 125px;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #e9e4e6;
+}
+.topnav_menu {
+    width: 75%;
+    padding-left: 2%;
+}
+.topnav_useropt {
+    width: 15%;
+}
+.topnav_menu, .topnav_useropt {
+    display: block;
+    margin: auto;
+}
+.topnav_menu a, .topnav_useropt a {
+    padding: 10px 15px;
+    text-decoration: none;
+    text-align: center;
+    color: #204969;
+}
+.topnav_useropt a.login {
+    background-color: #00334e;
+    color: #f4f6f6;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px #e9e4e6;
+    font-weight: bold;
+}
+.topnav_menu a:hover, .topnav_useropt a:hover {
+    color: #204969;
+    background-color: #fdfdfd;
+    border-radius: 8px;
+}
+.topnav_useropt a.login:hover {
+    padding: 7px 12px;
+    border: 3px solid #204969;
+    background-color: #f4f6f6;
+    color: #204969;
+}
+.title {
+    background: #fff4e4;
+    font-family: 'Questrial';
+    width: 650px;
+    margin: auto ;
+    position: absolute;
+    top: 0px; 
+    left: 0px; 
+    bottom: 100px; 
+    right: 0px;
+    height: 175px;
+    border-radius: 15px;
+    padding: 8px 10px;
+}
